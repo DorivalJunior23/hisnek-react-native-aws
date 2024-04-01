@@ -1,5 +1,5 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 import HomeStack from './HomeStack';
@@ -9,6 +9,8 @@ import HomeScreen from '../screens/Home';
 import ProfileScreen from '../screens/Profile';
 import CartScreen from '../screens/Cart';
 import Colors from '../constant/Colors';
+import { Authenticator } from '@aws-amplify/ui-react-native';
+import ProfileAuth from '../components/ProfileAuth';
 
 
 
@@ -40,16 +42,18 @@ const BottomTabNav = () => {
           }
         }}
       />
-      <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          tabBarIcon: ({ color }) => <MaterialIcons name="person" color={color} size={25} />,
-          headerStyle: {
-            backgroundColor: Colors.headerColor
-          }
-        }}
-      />
+      
+          <Tab.Screen
+            name="Profile"
+            component={ProfileAuth}
+            options={{
+              tabBarIcon: ({ color }) => <MaterialIcons name="person" color={color} size={25} />,
+              headerStyle: {
+                backgroundColor: Colors.headerColor
+              }
+            }}
+          />
+       
     </Tab.Navigator>
   );
 };

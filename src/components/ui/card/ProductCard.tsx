@@ -41,7 +41,7 @@ export default function ProductCard({ item }: ProductCardProps) {
                     <Text>{item.ratings}</Text>
                 </View>
                 <Text style={styles.price}>
-                    from ${item.price}
+                    from ${item.price.toFixed(2)}
                 </Text>
             </View>
         </Pressable>

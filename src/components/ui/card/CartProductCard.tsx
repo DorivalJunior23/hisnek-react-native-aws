@@ -8,7 +8,6 @@ interface CartProductCardProps {
     cartItem: {
         id: string;
         quantity: number;
-        option?: string; 
         item: {
             id: string;
             title: string;
@@ -48,7 +47,7 @@ export default function CartProductCard({cartItem }: CartProductCardProps) {
                         <Text>{item.ratings}</Text>
                     </View>
                     <Text style={styles.price}>
-                        from ${item.price}
+                        from ${item.price.toFixed(2)}
                     </Text>
                     <QuantitySelector quantity={quantity} setQuantity={setQuantity}/>
                 </View>
