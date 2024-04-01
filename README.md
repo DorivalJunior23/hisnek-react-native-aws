@@ -1,3 +1,28 @@
+## 🚀 Como executar
+
+Clone o repositório e acesse a pasta.
+
+```bash
+$ git clone https://github.com/DorivalJunior23/hisnek-react-native-aws/tree/main
+
+Para iniciar o projeto:
+
+```bash
+
+# Instalar as dependências
+$ npm install
+
+
+# Iniciar o projeto
+$ expo start
+
+# Iniciar no android
+$ a
+```
+
+
+
+
 # ✨ Estrutura base de código
 
 O projeto é codificado utilizando uma estrutura simples e intuitiva apresentada a seguir:
